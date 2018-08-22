@@ -2,15 +2,15 @@ set encoding=utf-8	"使用utf-8编码
 set number
 set showcmd
 "set clipboard=unnamed,unnamedplus	"可以从vim复制到剪贴板中
-set mouse=a		"可以在buffer的任何地方使用鼠标
+set mouse=a			"可以在buffer的任何地方使用鼠标
 set cursorline		"显示当前行
 set hlsearch		"显示高亮搜索
 "set incsearch
 set history=40		"默认指令记录是20
-set ruler		"显示行号和列号
+set ruler			"显示行号和列号
 set pastetoggle=F3	"F3快捷键于paste模式与否之间转化，防止自动缩进
 "set helplang=cn	"设置为中文帮助文档，需下载并配置之后生效
- 
+
 "===============文本格式排版====================
 set tabstop=4
 set shiftwidth=4	"设置自动对齐的缩进级别
@@ -26,7 +26,7 @@ syntax on
 "solarized的浅色模式 
 "set background=light 
 "colorscheme solarized        "开启背景颜色模式 
- 
+
 "===========================选择molokai的模式============================ 
 "let g:rehash256 = 1 
 let g:molokai_original = 1    "相较于上一个模式，个人比较喜欢此种模式 
@@ -48,7 +48,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "添加clang插件
 "Plugin 'rip-rip/clang_complete'
+"Plugin 'Valloric/YouCompleteMe'
 
+let g:ycm_server_python_interpreter='/usr/bin/python'
+"cp ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_ex
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:clang_complete_copen=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
@@ -65,7 +69,7 @@ let g:neocomplcache_enable_at_startup=1
 "插件列表
 " Define bundles via Github repos "
 Bundle 'christoomey/vim-run-interactive'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'croaky/vim-colors-github'
 Bundle 'danro/rename.vim'
 Bundle 'majutsushi/tagbar'
